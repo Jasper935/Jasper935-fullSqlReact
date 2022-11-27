@@ -4,8 +4,8 @@ const app = express()
 const cors =require('cors')
 app.use(express.json())
 app.use(cors())
-// process.env.PORT ||
-const port = 8800
+
+const port =process.env.PORT || 8800
 const sql = require('mysql')
 
 const connection = sql.createConnection({
