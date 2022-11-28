@@ -49,7 +49,7 @@ app.listen(port, () => {
     console.log("started");
 })
 
-app.get('/reviews', (req, res) => {
+app.get('https://git.heroku.com/fierce-hollows-93590.git/reviews', (req, res) => {
     const q = 'SELECT * FROM revs'
 
     connection.query(q, (err, data) => {
@@ -63,7 +63,7 @@ app.get('/reviews', (req, res) => {
 
 
 
-    app.post("/reviews", (req, res) => {
+    app.post("https://git.heroku.com/fierce-hollows-93590.git/reviews", (req, res) => {
        
         const obj = { name: req.body.name, work: req.body.work, text: req.body.text, date:req.body.date }
         console.log(obj);
@@ -81,7 +81,7 @@ app.get('/reviews', (req, res) => {
         
     })
 
-    app.delete('/reviews/:id', (req, res) => {
+    app.delete('https://git.heroku.com/fierce-hollows-93590.git/reviews/:id', (req, res) => {
         const q = `DELETE FROM revs WHERE ID=${req.params.id.slice(1)}`
         console.log(q);
         // console.log(req.params.id);
